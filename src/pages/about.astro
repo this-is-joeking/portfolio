@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -9,6 +11,9 @@ const identity = {
 };
 const skills = ["Ruby", "Rails", "SQL", "HTML", "CSS", "JavaScript"];
 const finished = false;
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -18,6 +23,17 @@ const finished = false;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill{
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
 	</head>
 	<body>
 		<a href="/">Home</a>
@@ -38,7 +54,7 @@ const finished = false;
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
     {finished && <p>I am finished</p>}
 	</body>
