@@ -1,4 +1,14 @@
 ---
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Joe",
+  location: "Phoenix, Arizona",
+  occupation: "Software Developer",
+  hobbies: ["woodworking", "reading", "hiking"]
+};
+const skills = ["Ruby", "Rails", "SQL", "HTML", "CSS", "JavaScript"];
+const finished = false;
 ---
 
 <html lang="en">
@@ -7,7 +17,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
@@ -15,10 +25,21 @@
     <a href="/blog/">Blog</a>
 
     <h1>Joe King's Portfolio</h1>
-    <h1>About Me</h1>
+    <h1>{pageTitle}</h1>
     <h2>And my tech journey</h2>
-    <p>I am working on Astro's introductory tutorial. Eventually this will be populated with details about me.</p>
+    <p>Here are a few facts about me: </p>
+    <ul>
+      <li>My name is {identity.firstName}</li>
+      <li>I live in {identity.location} and I am a {identity.occupation} </li>
 
-    <p>For now it will have this filler text, how fun #loremipsumyadayadayada </p>
+      {identity.hobbies.length >= 2 &&
+        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+      }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+    {finished && <p>I am finished</p>}
 	</body>
 </html>
