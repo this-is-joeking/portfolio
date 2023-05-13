@@ -20,6 +20,14 @@ h1 {
   font-size: 2.5rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 html.dark {
   background-color: #0d0950;
   color: #fff;
@@ -27,6 +35,10 @@ html.dark {
 
 .dark .nav-links a {
   color: #fff;
+}
+
+.dark a {
+  color: hotpink;
 }
 
 /* nav styles */

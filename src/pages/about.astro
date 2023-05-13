@@ -1,31 +1,53 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import profilePic from '/assets/profile_pic.jpg'
 const pageTitle = "About Me";
 
 const identity = {
   firstName: "Joe",
   location: "Phoenix, Arizona",
   occupation: "Software Developer",
-  hobbies: ["woodworking", "reading", "hiking"]
+  hobbies: ["woodworking", "reading", "hiking", "photography", "gardening"],
+  creations: ["🪑 furniture", "🍪 cookies", "🍰 cake", "🃏 cribbage boards"]
 };
-const skills = ["Ruby", "Rails", "SQL", "HTML", "CSS", "JavaScript"];
-const finished = false;
+const skills = ["Ruby", "Rails", "SQL", "HTML", "CSS", "JavaScript", "Heroku", "CI/CD", "GraphQL", "REST APIs"];
+const learning = ["Java", "Astro", "JavaScript"];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>And my tech journey</h2>
-  <p>Here are a few facts about me: </p>
-  <ul>
-    <li>My name is {identity.firstName}</li>
-    <li>I live in {identity.location} and I am a {identity.occupation} </li>
-
-    {identity.hobbies.length >= 2 &&
-      <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-    }
-  </ul>
-  <p>My skills are:</p>
+  <img src={profilePic} alt="profile picture" class="profilePic">
+  <p>
+    My name is {identity.firstName}, I am a back end engineer based in Phoenix, Arizona with a background in financial services and hospitality. 
+    In April I graduated from the Turing School of Software & Design's ACCET-accredited Backend Engineering program. 
+  </p>
+  <p>
+    During my seven months at the Turing School I gained over 1500 hours of programming and collaborating experience. 
+    I completed over a dozen projects, most of which involved collaborating with other developers. 
+  </p>  
+  <p>Current skills include:</p>
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
-  {finished && <p>I am finished</p>}
+  <p>Learning: </p>
+  <ul>
+    {learning.map((futureSkill) => <li class="skill">{futureSkill}</li>)}
+  </ul>
+  <p>Hobbies: </p>
+  <ul>
+    {identity.hobbies.map((hobby) => <li class="skill">{hobby}</li>)}
+  </ul>
+  <p class="creation">Besides software I also enjoy making:</p>
+    {identity.creations.map(creation => <p class="creation">{creation}</p> )}
 </BaseLayout>
+
+<style>
+  .creation {
+    font-size: 1.25rem;
+  }
+  .profilePic {
+    width: 50%;
+    border-radius: 5rem;
+    margin-bottom: 1rem;
+    align: center;
+  }
+</style>
