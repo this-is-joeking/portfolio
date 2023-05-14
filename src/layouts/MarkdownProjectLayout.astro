@@ -1,0 +1,41 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+
+---
+<BaseLayout pageTitle={frontmatter.title}>
+  <img src={frontmatter.image.url} width="100%" alt={frontmatter.image.alt} />
+  <p>{frontmatter.description}</p>
+  <p>{frontmatter.projectType}</p>
+  <p><a href={frontmatter.link}>Deployed Site</a></p>
+  <slot />
+  
+  
+  <div class="tags">
+    {frontmatter.tags.map((tag) => (
+      <p class="tag">
+        {tag}
+      </p>
+      ))}
+  </div>
+</BaseLayout>
+<style>
+  a {
+    color: #00539F;
+  }
+
+  .tags {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 0 auto;  
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #70e2ff;
+  }
+</style>
