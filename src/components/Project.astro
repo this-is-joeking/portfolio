@@ -1,11 +1,12 @@
 ---
 const {url, title, image} = Astro.props;
 ---
-<div class="swiper-slide item project">
+<div class="project">
   <img src={image} width=100%>
   <br>
   <a href={url}>{title}</a>
 </div>
+
 
 <style>
   .project {
