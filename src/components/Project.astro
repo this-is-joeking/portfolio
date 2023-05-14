@@ -2,9 +2,11 @@
 const {url, title, image} = Astro.props;
 ---
 <div class="project">
-  <img src={image} width=100%>
-  <br>
-  <a href={url}>{title}</a>
+  <a href={url}>
+    <img src={image} width=100%>
+    <br>
+    {title}
+  </a>
 </div>
 
 

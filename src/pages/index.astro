@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
 import Project from '../components/Project.astro';
 const allProjects = await Astro.glob('../pages/projects/*.md');
+const tags = [...new Set(allProjects.map((project) => project.frontmatter.skills).flat())];
+
 
 const pageTitle = "Joe King's Portfolio";
 ---
@@ -27,7 +29,14 @@ const pageTitle = "Joe King's Portfolio";
 		})
 	</script>
 
-	<h2>Technologies</h2>
+	<h2>Skills</h2>
+	<div class="tags">
+    {tags.map((tag) => (
+      <p class="tag">
+        <a href={`/skills/${tag}`}>{tag}</a>
+      </p>
+      ))}
+  </div>
 </BaseLayout>
 
 <style>
@@ -36,7 +45,22 @@ const pageTitle = "Joe King's Portfolio";
   overflow: auto;
   scroll-snap-type: x mandatory; 
 	
+
 }  
+.tags {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 0 auto;  
+  }
+
+	.tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+  }
 
 .carousel .item {  
    flex-shrink: 0;
