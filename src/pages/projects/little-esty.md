@@ -8,4 +8,7 @@ image:
   url: '/assets/project_pics/littleesty.png' 
   alt: 'Screenshot of merchant dashboard'
 tags: ["Ruby on Rails", "ActiveRecord", "Data Migration", "PostgreSQL", "Heroku"]
+pubDate: 2023-05-14
+author: 'Joe K'
+
 ---

@@ -8,4 +8,7 @@ image:
   url: '/assets/project_pics/listen-up.gif' 
   alt: 'Gif screen capture of game being played'
 tags: ["Ruby on Rails", "GraphQL", "Postman", "Heroku", "GitHub Projects", "CI/CD"]
+pubDate: 2023-05-14
+author: 'Joe K'
+
 ---
