@@ -1,4 +1,5 @@
-# Astro Starter Kit: Minimal
+# Portfolio
+This work in progress is my personal portfolio including details about my technical projects, learnings, and skill sets.
 
 ```
 npm create astro@latest -- --template minimal
