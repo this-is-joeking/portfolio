@@ -14,7 +14,7 @@ const pageTitle = "Joe King's Portfolio";
 	<h2>Projects</h2>
 	<div class="swiper">
 		<div class="carousel">
-			{allProjects.map((project) => <Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image.url}/>)}
+			{allProjects.map((project) => <div class="swiper-slide item"><Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image.url}/></div>)}
 		</div>
 	</div>
 	
