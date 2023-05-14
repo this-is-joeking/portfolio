@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Project from '../components/Project.astro';
+const allProjects = await Astro.glob('../pages/projects/*.md');
+const pageTitle = "Projects"
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ul>
+    {allProjects.map((project) => <Project url={project.url} title={project.frontmatter.title}/>)}
+  </ul>
+  Browse by <a href="/skills/">tag</a>
+</BaseLayout>

@@ -7,8 +7,9 @@ projectType: 'Group Project'
 image: 
   url: '/assets/project_pics/streamlined.png' 
   alt: 'Screenshot of homepage'
-tags: ["Ruby on Rails", "REST API", "Bootstrap", "OAuth", "Heroku"]
+skills: ["Ruby on Rails", "REST API", "Bootstrap", "OAuth", "Heroku"]
 pubDate: 2023-03-14
 author: 'Joe K'
 
 ---
+a
