@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
+
 const pageTitle = "Joe King's Portfolio";
 ---
 
@@ -9,8 +10,43 @@ const pageTitle = "Joe King's Portfolio";
 	<h2>Welcome to my portfolio</h2>
 	<p>Make yourself at home, below you will find some of my coding projects. You can read more about me <a href="/about/">here</a>.</p>
 	<h2>Projects</h2>
+	<div class="swiper">
+		<div class="swiper-wrapper carousel">
+			<div class="swiper-slide item">Slide 1</div>
+			<div class="swiper-slide item">Slide 2</div>
+			<div class="swiper-slide item">Slide 3</div>
+		</div>
+	</div>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script is:inline>
+		new Swiper('.swiper', {
+			slidesPerView: 1.5,
+		})
+	</script>
+
 	<h3>List each project here</h3>
 		Or maybe create a component for a project and iterate through each project here. 
 		Could a project be similar to a blog post?
 	<h2>Technologies</h2>
 </BaseLayout>
+
+<style>
+	.carousel {  
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory; /* <- the important piece */
+}  
+.carousel .item {  
+   flex-shrink: 0;
+   scroll-snap-align: start; /* <- the other important piece */
+}  
+.swiper {
+  width: 100%;
+  height: 300px;
+}
+.swiper-cards {
+	width: 50%;
+}
+</style>
