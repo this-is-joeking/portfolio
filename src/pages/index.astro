@@ -13,7 +13,7 @@ const pageTitle = "Joe King's Portfolio";
 	<p>Make yourself at home, below you will find some of my coding projects. You can read more about me <a href="/about/">here</a>.</p>
 	<h2>Projects</h2>
 	<div class="swiper">
-		<div class="swiper-wrappe carousel">
+		<div class="carousel">
 			{allProjects.map((project) => <Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image.url}/>)}
 		</div>
 	</div>
@@ -27,9 +27,6 @@ const pageTitle = "Joe King's Portfolio";
 		})
 	</script>
 
-	<h3>List each project here</h3>
-		Or maybe create a component for a project and iterate through each project here. 
-		Could a project be similar to a blog post?
 	<h2>Technologies</h2>
 </BaseLayout>
 
