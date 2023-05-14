@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
+import Project from '../components/Project.astro';
+const allProjects = await Astro.glob('../pages/projects/*.md');
+// allProjects.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 
 const pageTitle = "Joe King's Portfolio";
 ---
@@ -12,9 +15,7 @@ const pageTitle = "Joe King's Portfolio";
 	<h2>Projects</h2>
 	<div class="swiper">
 		<div class="swiper-wrapper carousel">
-			<div class="swiper-slide item">Slide 1</div>
-			<div class="swiper-slide item">Slide 2</div>
-			<div class="swiper-slide item">Slide 3</div>
+			{allProjects.map((project) => <Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image.url}/>)}
 		</div>
 	</div>
 	

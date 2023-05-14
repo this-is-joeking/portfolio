@@ -1,0 +1,14 @@
+---
+const {url, title, image} = Astro.props;
+---
+<div class="swiper-slide item project">
+  <img src={image} width=75%>
+  <br>
+  <a href={url}>{title}</a>
+</div>
+
+<style>
+  .project {
+    text-align: center;
+  }
+</style>
