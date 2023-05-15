@@ -3,19 +3,19 @@ const {url, title, image} = Astro.props;
 ---
 <div class="project">
   <a href={url}>
-    <img src={image} width=100%>
-    <br>
-    <h2>{title}</h2>
+    <p>{title}</p>
+    <img src={image} width=95%>
   </a>
 </div>
 
 
 <style>
   .project {
+    line-height: 0%;
     text-align: center;
     margin-right: 2rem;
     margin-left: 2rem;
-    margin-top: 2rem;
+    margin-top: .5rem;
     margin-bottom: 2rem;
     padding: 1rem;
     background-color: rgba(174, 0, 255, 0.4);
