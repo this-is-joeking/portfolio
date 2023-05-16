@@ -7,7 +7,7 @@ const pageTitle = "Projects"
 
 <BaseLayout pageTitle={pageTitle}>
   <ul>
-    {allProjects.map((project) => <Project url={project.url} title={project.frontmatter.title}/>)}
+    {allProjects.map((project) => <Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image}/>)}
   </ul>
   Browse by <a href="/skills/">tag</a>
 </BaseLayout>

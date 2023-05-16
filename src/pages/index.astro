@@ -16,7 +16,8 @@ const pageTitle = "Joe King's Portfolio";
 	<h2>Projects</h2>
 	<div class="swiper">
 		<div class="carousel">
-			{allProjects.map((project) => <div class="swiper-slide item"><Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image.url}/></div>)}
+			{allProjects.map((project) => <div class="swiper-slide item"><Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image}/></div>)}
+			<div class="swiper-slide item allProjects"><a href="/projects/">All Projects</a></div>
 		</div>
 	</div>
 	
@@ -38,6 +39,18 @@ const pageTitle = "Joe King's Portfolio";
   overflow: auto;
   scroll-snap-type: x mandatory;
 }  
+.allProjects {
+    line-height: 0%;
+    text-align: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: rgba(174, 0, 255, 0.4);
+    box-shadow: 3px 3px rgba(0, 251, 255, 0.4), -1em 0 .4em rgb(46, 177, 225, 0.4);
+    border-radius: 2rem;
+  }
 	.tags {
     display: flex; 
     flex-wrap: wrap; 

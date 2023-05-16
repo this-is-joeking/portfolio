@@ -4,7 +4,7 @@ const {url, title, image} = Astro.props;
 <div class="project">
   <a href={url}>
     <p>{title}</p>
-    <img src={image} width=95%>
+    <img src={image.url} alt={image.alt} width=95%>
   </a>
 </div>
 
