@@ -10,6 +10,8 @@ image:
 skills: ["Ruby on Rails", "ActiveRecord", "Data Migration", "PostgreSQL", "Heroku"]
 pubDate: 2023-05-14
 author: 'Joe K'
-
+repository: 
+  backend: false
+  frontend: false
 ---
 a
