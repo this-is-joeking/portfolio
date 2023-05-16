@@ -5,9 +5,12 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
   <img src={frontmatter.image.url} width="100%" alt={frontmatter.image.alt} />
-  <p>{frontmatter.description}</p>
-  <p>{frontmatter.projectType}</p>
+  <h3>TL;DR - {frontmatter.description}</h3>
+  <p>Project Type: {frontmatter.projectType}</p>
   <p><a href={frontmatter.link}>Deployed Site</a></p>
+  <p>{frontmatter.repository.frontend && <a href="frontmatter.repository.frontend">Front End Repository</a>}</p>
+  <p>{frontmatter.repository.backend && <a href="frontmatter.repository.backend">Back End Repository</a>}</p>
+  <p>{frontmatter.repository.monolith && <a href="frontmatter.repository.monolith">Repository</a>}</p>
   <slot />
   
   

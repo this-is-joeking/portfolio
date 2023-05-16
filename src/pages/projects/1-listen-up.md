@@ -7,11 +7,12 @@ projectType: 'Group Project'
 image: 
   url: '/assets/project_pics/listen-up.gif' 
   alt: 'Gif screen capture of game being played'
-skills: ["Ruby on Rails", "GraphQL", "Postman", "Heroku", "GitHub Projects", "CI CD", "REST API", "VCR / WebMock", "RSpec", "ActiveRecord", "SQL"]
+skills: ["Ruby on Rails", "GraphQL", "Postman", "Heroku", "GitHub Projects", "CI CD", "REST API", "VCR & WebMock", "RSpec", "ActiveRecord", "SQL", "Service Oriented Architecture", "Heroku"]
 pubDate: 2023-05-14
 author: 'Joe K'
 repository:
   backend: 'https://github.com/Listen-Up-2210'
+  frontend: 'https://github.com/Listen-Up-2210/listen-up-ui'
 
 ---
 For this project I worked on a team with 7 other developers. 3 of us made up the back end team. Our backend is the core of the sound-guessing game that powers the app. It holds and manages data on the various sounds that the user can play, and responds to requests from the front end to generate decks of sounds and track scores on the leaderboard.
@@ -32,4 +33,4 @@ For ease of use we added a [Graph*i*QL Playground](https://listen-up-be.herokuap
 - Focus on open and frequent communication across teams via Slack, Zoom, Miro board, & Github Project Board
 
 ## Challenges
-In our original game architecture, we organized the application such that the front end would request all eight questions and sound URLs at the start of the game. In testing, we discovered this caused an unacceptable load time to start the game and posed a risk of reaching the Freesound API rate limit if multiple people started games simultaneously. To correct this based on my suggestion, we changed the structure so the front end would request one question/sound at a time, significantly reducing game load time and the likelihood of reaching our API rate limit of 60 requests per minute.
+In our original game architecture, we organized the application such that the front end would request all eight questions and sound URLs at the start of the game. In testing, we discovered this caused an unacceptable load time to start the game and posed a risk of reaching the Freesound API rate limit if multiple people started games simultaneously. Based on my suggestion, we corrected this by changing the structure so the front end would request one question/sound at a time, significantly reducing game load time and the likelihood of reaching our API rate limit of 60 requests per minute.
