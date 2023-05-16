@@ -24,6 +24,6 @@ const { projects } = Astro.props;
 <BaseLayout pageTitle={skill}>
   <p>Posts tagged with {skill}</p>
   <ul>
-    {projects.map((project) => <Project url={project.url} title={project.frontmatter.title}/>)}
+    {projects.map((project) => <Project url={project.url} title={project.frontmatter.title} image={project.frontmatter.image}/>)}
   </ul>
 </BaseLayout>
