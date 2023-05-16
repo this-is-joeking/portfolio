@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import profilePic from '/assets/profile_pic.jpg'
+import Skills from '../components/Skills.astro'
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -8,9 +10,8 @@ const identity = {
   location: "Phoenix, Arizona",
   occupation: "Software Developer",
   hobbies: ["woodworking", "reading", "hiking", "photography", "gardening"],
-  creations: ["🪑 furniture", "🍪 cookies", "🍰 cake", "🃏 cribbage boards"]
+  creations: ["🪑 furniture", "🍪 cookies", "🍰 cake", "🃏 cribbage boards", "⛰ trips to the mountains"]
 };
-const skills = ["Ruby", "Rails", "SQL", "HTML", "CSS", "JavaScript", "Heroku", "CI/CD", "GraphQL", "REST APIs"];
 const learning = ["Java", "Astro", "JavaScript"];
 ---
 
@@ -24,20 +25,15 @@ const learning = ["Java", "Astro", "JavaScript"];
     During my seven months at the Turing School I gained over 1500 hours of programming and collaborating experience. 
     I completed over a dozen projects, most of which involved collaborating with other developers. 
   </p>  
-  <p>Current skills include:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-  <p>Learning: </p>
+  <p class="creation">Besides software I also enjoy making:</p>
+  {identity.creations.map(creation => <p class="creation">{creation}</p> )}
+
+  <p>My current skills include:</p>
+  <Skills />
+  <p>I am currently learning: </p>
   <ul>
     {learning.map((futureSkill) => <li class="skill">{futureSkill}</li>)}
   </ul>
-  <p>Hobbies: </p>
-  <ul>
-    {identity.hobbies.map((hobby) => <li class="skill">{hobby}</li>)}
-  </ul>
-  <p class="creation">Besides software I also enjoy making:</p>
-    {identity.creations.map(creation => <p class="creation">{creation}</p> )}
 </BaseLayout>
 
 <style>

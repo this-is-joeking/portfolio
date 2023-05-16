@@ -1,12 +1,15 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Second Blog Post
+title: Making a Blog with Astro
 author: Joe K
-description: "Placeholder!"
+tldr: "Building My Portfolio"
 image: 
     url: "https://docs.astro.build/assets/arc.webp"
     alt: "Thumbnail of Astro arcs,"
-pubDate: 2023-05-11
+pubDate: 2023-05-16
 tags: ["astro", "blogging", "learning in public", "successes"]
 ---
-Astro seems very easy to pick up so far. I am curious to see how styling works. Most of my experience styling has been small css changes after importing a bootstrap template on a rails front end. So I imagine it will be a bit more involved to style an Astro site. We will see.
+To build this page I started by following the blog tutorial from Astro's docs. You can find the tutorial [here](https://docs.astro.build/en/tutorial/0-introduction/).
+From there I went on to replicate the blog post format with projects. Astro has been incredibly easy for me to learn even though my focus in the past has been on back end.
+
+The tougher part has been working with CSS to get styling down. I was excited to finally get my projects carousel on the landing page working after lots of trial and error.

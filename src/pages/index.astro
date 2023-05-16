@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
 import Project from '../components/Project.astro';
+import Skills from '../components/Skills.astro'
+
 const allProjects = await Astro.glob('../pages/projects/*.md');
 const tags = [...new Set(allProjects.map((project) => project.frontmatter.skills).flat())];
 
@@ -24,13 +26,7 @@ const pageTitle = "Joe King's Portfolio";
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
 	<h2>Skills</h2>
-	<div class="tags">
-    {tags.map((tag) => (
-      <p class="tag">
-        <a href={`/skills/${tag}`}>{tag}</a>
-      </p>
-      ))}
-  </div>
+  <Skills fontSize="0.75em"/>
 </BaseLayout>
 
 <style>
