@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d0282dd9-1888-4b65-9d75-3b9519024620/deploy-status)](https://app.netlify.com/sites/joek/deploys)
 # Portfolio
 This work in progress is my personal portfolio including details about my technical projects, learnings, and skill sets.
 
